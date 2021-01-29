@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "ESNext", // 编译目标
+    "module": "ESNext", // ts中模块化标准
+    "strict": true, // 启用所有的严格的类型检查
+    "removeComments": true, // 删除所有注释
+    // "strictNullChecks": true, // 使用 undefined 和 null更加严格的检查，
+    // "noImplicitUseStrict": true, // 编译结果不出现 use strict 针对cjs标准
+    // "jsx": "preserve", // 解释见 https://www.tslang.cn/docs/handbook/jsx.html
+    "importHelpers": true,
+    "moduleResolution": "node", // 找不到模块再去哪里找
+    "experimentalDecorators": true, // 启用实验性的ES装饰器。
+    "skipLibCheck": true, // 忽略所有的声明文件（ *.d.ts）的类型检查
+    "esModuleInterop": true, // 允许从没有设置默认导出的模块中默认导入
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true, // 阻止 --noImplicitAny对缺少索引签名的索引对象报错
+    // "noImplicitAny": true, // 在表达式和声明上有隐含的 any类型时报错。
+    "sourceMap": true, // 生成相应的.map文件
+    "baseUrl": ".", // 解析非相对模块名的基准目录
+    "paths": {
+      "/@/*": ["src/*"],
+      "/@c/*": ["src/*"]
+    },
+    "lib": ["Esnext", "Dom", "ScriptHost"]
+  },
+  "include": ["./**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules"]
+}
