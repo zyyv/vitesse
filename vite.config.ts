@@ -1,24 +1,39 @@
-const { resolve } = require('path')
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
+import Vue from '@vitejs/plugin-vue'
+import Unocss from 'unocss/vite'
+import AutoImport from 'unplugin-auto-import/vite'
+import Components from 'unplugin-vue-components/vite'
+import Pages from 'vite-plugin-pages'
+import Layouts from 'vite-plugin-vue-layouts'
+import Markdown from 'vite-plugin-md'
 
 const pathResolve = (src: string) => resolve(__dirname, src)
-
-// const pathName = '/chat'
-
-module.exports = {
-  base: '.',
-  alias: {
-    '/@/': pathResolve('src'),
-    '/@c/': pathResolve('src/components'),
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [
+    Vue({ script: { refSugar: true }, include: [/\.vue$/, /\.md$/] }),
+    Unocss(),
+    Pages({ extensions: ['vue', 'md'] }),
+    Layouts(),
+    AutoImport({
+      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
+      dts: 'src/auto-imports.d.ts'
+    }),
+    Components({
+      extensions: ['vue', 'md'],
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: 'src/components.d.ts'
+    }),
+    Markdown()
+  ],
+  resolve: {
+    alias: {
+      '@': pathResolve('src'),
+      '@a': pathResolve('src/assets')
+    }
   },
-  // outDir: pathResolve(`../build${pathName}`),
-  // optimizeDeps: {
-  //   include: ['ant-design-vue', '@ant-design-vue/use', '@ant-design/icons-vue', 'vue-socket.io'],
-  // },
-  // proxy: {
-  //   '/api': {
-  //     target: 'http://localhost:9999/api',
-  //     changeOrigin: true,
-  //     rewrite: (path: string) => path.replace(/^\/api/, '')
-  //   }
-  // }
-}
+  optimizeDeps: {
+    include: ['vue', 'vue-router', '@vueuse/core']
+  }
+})
