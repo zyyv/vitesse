@@ -26,4 +26,6 @@
 - [unocss](https://github.com/antfu/unocss)
 - etc.
 
+# Project Activity
 
+![Alt](https://repobeats.axiom.co/api/embed/b4134a088513e1e7ea692a13e44a453363f70eeb.svg "Repobeats analytics image")
