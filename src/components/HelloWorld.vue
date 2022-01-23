@@ -12,31 +12,8 @@ const count = ref(0)
       {{ msg }}
     </h1>
 
-    <p py-2>
-      Recommended IDE setup:
-      <a class="text-[#42b983]" href="https://code.visualstudio.com/" target="_blank">VSCode</a>
-      +
-      <a class="text-[#42b983]" href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    </p>
-
-    <p py-2>
-      See <code>README.md</code> for more information.
-    </p>
-
-    <p py-2>
-      <a class="text-[#42b983]" href="https://vitejs.dev/guide/features.html" target="_blank">
-        Vite Docs
-      </a>
-      |
-      <a class="text-[#42b983]" href="https://v3.vuejs.org/" target="_blank">Vue 3 Docs</a>
-    </p>
-
     <button type="button" @click="count++">
       count is: {{ count }}
     </button>
-    <p py-2>
-      Edit
-      <code class="bg-[#eee] px-4 py-2 text-[#304455] rounded-[4px]">components/HelloWorld.vue</code> to test hot module replacement.
-    </p>
   </div>
 </template>

@@ -15,7 +15,9 @@ specifiers:
   vite: ^2.7.2
   vite-plugin-md: ^0.11.7
   vite-plugin-pages: ^0.20.0
+  vite-plugin-vue-images: ^0.6.1
   vite-plugin-vue-layouts: ^0.5.0
+  vite-plugin-vue-setup-extend: ^0.3.0
   vue: ^3.2.25
   vue-router: ^4.0.12
   vue-tsc: ^0.29.8
@@ -39,7 +41,9 @@ devDependencies:
   vite: 2.7.12_sass@1.48.0
   vite-plugin-md: 0.11.7_vite@2.7.12
   vite-plugin-pages: 0.20.0_vite@2.7.12
+  vite-plugin-vue-images: 0.6.1
   vite-plugin-vue-layouts: 0.5.0_adba8b57b8e4307cab9bc1f5bc19737b
+  vite-plugin-vue-setup-extend: 0.3.0_vite@2.7.12
   vue-tsc: 0.29.8_typescript@4.5.4
 
 packages:
@@ -1766,6 +1770,18 @@ packages:
       micromatch: 4.0.4
     dev: true
 
+  /fast-glob/3.2.5:
+    resolution: {integrity: sha512-2DtFcgT68wiTTiwZ2hNdJfcHNke9XOfnwmBRWXhmeKM8rF0TGwmC/Qto3S7RoZKp5cilZbxzO5iTNTQsJ+EeDg==}
+    engines: {node: '>=8'}
+    dependencies:
+      '@nodelib/fs.stat': 2.0.5
+      '@nodelib/fs.walk': 1.2.8
+      glob-parent: 5.1.2
+      merge2: 1.4.1
+      micromatch: 4.0.4
+      picomatch: 2.3.1
+    dev: true
+
   /fast-json-stable-stringify/2.1.0:
     resolution: {integrity: sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==}
     dev: true
@@ -3404,6 +3420,15 @@ packages:
       - supports-color
     dev: true
 
+  /vite-plugin-vue-images/0.6.1:
+    resolution: {integrity: sha512-eaZHMimOOQdPSPIrAOrgwyS2pwxhLxAKc2idljCfThGZEDLAmPc4EtN2JOywUZb0Kcx/7+JDOIRFEJPTV5X5cg==}
+    dependencies:
+      debug: 4.3.3
+      fast-glob: 3.2.5
+    transitivePeerDependencies:
+      - supports-color
+    dev: true
+
   /vite-plugin-vue-layouts/0.5.0_adba8b57b8e4307cab9bc1f5bc19737b:
     resolution: {integrity: sha512-KN03GMSGNrWxeHJo5OO9fvdZh44PfievNAoLeMbf20UQPBBO6kpIMVTYB6sFPMWmiTbqZmq3we4z/ocJkxAEiA==}
     peerDependencies:
@@ -3419,6 +3444,16 @@ packages:
       vue-router: 4.0.12_vue@3.2.26
     transitivePeerDependencies:
       - supports-color
+    dev: true
+
+  /vite-plugin-vue-setup-extend/0.3.0_vite@2.7.12:
+    resolution: {integrity: sha512-9Nd7Bj4TftB2CoOAD2ZI4cHLW5zjKMF3LNihWbrnAPx3nuGBn33tM9SVUGBVjBB6uv1mGAPavwKCTU0xAD8qhw==}
+    peerDependencies:
+      vite: '>=2.0.0'
+    dependencies:
+      '@vue/compiler-sfc': 3.2.26
+      magic-string: 0.25.7
+      vite: 2.7.12_sass@1.48.0
     dev: true
 
   /vite/2.7.12_sass@1.48.0:

@@ -1,7 +1,10 @@
-<h1 align="center">Vue3 Template</h1>
+---
+title: About
+---
 
-<p align="center">采用
-<a href="https://vitejs.dev/"><img width="30" src="https://vitejs.dev/logo.svg" /></a>搭建</p>
+<div class="text-center">
+  <h3>About</h3>
+</div>
 
 # Env
 `node` >= @v14
@@ -27,3 +30,4 @@
 - etc.
 
 
+Check out the [GitHub repo](https://github.com/chris-zhu/vue3-template) for more details.

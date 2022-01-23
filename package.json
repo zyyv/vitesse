@@ -1,9 +1,12 @@
 {
   "name": "vue3-template",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "一个麻雀虽小但五脏俱全的Vue3模板。（A stronger template with Vue3）",
   "main": "src/main.ts",
-  "keywords": ["vue3", "vue3-template"],
+  "keywords": [
+    "vue3",
+    "vue3-template"
+  ],
   "author": "chris-zhu <https://github.com/chris-zhu>",
   "license": "MIT",
   "repository": {
@@ -15,11 +18,11 @@
   },
   "homepage": "https://github.com/chris-zhu/vue3-template#readme",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --port=1111",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint \"**/*.{vue,ts,js}\"",
-    "lint:fix": "nr lint -- --fix"
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "@vueuse/core": "^7.5.3",
@@ -40,7 +43,9 @@
     "vite": "^2.7.2",
     "vite-plugin-md": "^0.11.7",
     "vite-plugin-pages": "^0.20.0",
+    "vite-plugin-vue-images": "^0.6.1",
     "vite-plugin-vue-layouts": "^0.5.0",
+    "vite-plugin-vue-setup-extend": "^0.3.0",
     "vue-tsc": "^0.29.8"
   }
 }
