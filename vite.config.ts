@@ -19,7 +19,7 @@ export default defineConfig({
     Pages({ extensions: ['vue', 'md'] }),
     Layouts(),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core'],
+      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core', { axios: [['default', 'axios']] }],
       dts: 'src/auto-imports.d.ts'
     }),
     Components({
