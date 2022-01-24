@@ -5,6 +5,7 @@ specifiers:
   '@types/node': ^17.0.8
   '@vitejs/plugin-vue': ^2.0.0
   '@vueuse/core': ^7.5.3
+  axios: ^0.25.0
   eslint: ^8.6.0
   pinia: ^2.0.9
   sass: ^1.48.0
@@ -24,6 +25,7 @@ specifiers:
 
 dependencies:
   '@vueuse/core': 7.5.3_vue@3.2.26
+  axios: 0.25.0
   pinia: 2.0.9_typescript@4.5.4+vue@3.2.26
   vue: 3.2.26
   vue-router: 4.0.12_vue@3.2.26
@@ -844,6 +846,14 @@ packages:
     transitivePeerDependencies:
       - debug
     dev: true
+
+  /axios/0.25.0:
+    resolution: {integrity: sha512-cD8FOb0tRH3uuEe6+evtAbgJtfxr7ly3fQjYcMcuPlgkwVS9xboaVIpcDV+cYQe+yGykgwZCs1pzjntcGa6l5g==}
+    dependencies:
+      follow-redirects: 1.14.7
+    transitivePeerDependencies:
+      - debug
+    dev: false
 
   /babel-walk/3.0.0-canary-5:
     resolution: {integrity: sha512-GAwkz0AihzY5bkwIY5QDR+LvsRQgB/B+1foMPvi0FZPMl5fjD7ICiznUiBdLYMH1QYe6vqu4gWYytZOccLouFw==}
@@ -1853,7 +1863,6 @@ packages:
     peerDependenciesMeta:
       debug:
         optional: true
-    dev: true
 
   /foreach/2.0.5:
     resolution: {integrity: sha1-C+4AUBiusmDQo6865ljdATbsG5k=}
