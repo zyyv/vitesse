@@ -1,20 +1,6 @@
 import { cancelTokenIns } from '.'
 import type { AxiosInstance, AxiosRequestConfig } from 'axios'
-import type { IResponseData } from '@/types'
-
-interface ConfigBase<T> {
-  baseURL?: string
-  timeout?: number
-  message?: T
-}
-
-interface UserConfig<T> extends ConfigBase<T>{}
-
-interface ErrorIns {
-  code: number
-  msg: string
-  type: 'success'| 'warning' | 'error' | 'info'
-}
+import type { ConfigBase, ErrorIns, IResponseData, UserConfig } from '@/types'
 
 const errorList: ErrorIns[] = [
   { code: 401, type: 'warning', msg: '请先登录后操作' },
@@ -28,19 +14,13 @@ export class HttpRequest {
   private config: ConfigBase
   private static instance: HttpRequest
 
-  private constructor(config: UserConfig) {
-    this.resolveConfig(config)
-    this._init()
-  }
-
-  resolveConfig(userConfig: UserConfig = {}) {
+  private constructor(userConfig: UserConfig) {
     const defaults: ConfigBase = {
-
+      baseURL: '/api',
+      timeout: 5000
     }
-    this.config = Object.assign({}, defaults, userConfig)
-  }
 
-  private _init() {
+    this.config = Object.assign({}, defaults, userConfig)
     this._ins = axios.create({
       baseURL: this.config.baseURL,
       timeout: this.config.timeout
@@ -48,6 +28,10 @@ export class HttpRequest {
     this._ins.defaults.headers.post['Content-Type']
       = 'application/x-www-form-urlencoded'
 
+    this._init()
+  }
+
+  private _init() {
     this._initRequest()
     this._initResponse()
   }
@@ -74,10 +58,12 @@ export class HttpRequest {
       (res) => {
         // const data = res.data as IResponseData
         if (res.status !== 200) {
-          this.config.message.error('网络错误')
+          this.config.message?.error('网络错误')
           return Promise.reject(res)
         }
-        // // 未登录
+
+        // you need custom your success response return
+
         // if (data.code === 600) {
         //   message.error(data.message)
         //   //   router.push({
@@ -96,38 +82,36 @@ export class HttpRequest {
       (error) => {
         const { data, status } = error.response
         const errIns = errorList.find(e => e.code === status)
-        if (errIns)
+        if (errIns && this.config.message)
           this.config.message[errIns.type](errIns.msg)
         else
-          this.config.message.error(data?.msg || '未知错误')
+          this.config.message?.error(data?.msg || '未知错误')
 
         return Promise.reject(error)
       }
     )
   }
 
-  public $get<T>(url: string, params?: Record<string, any>) {
+  $get<T>(url: string, params?: Record<string, any>) {
     return this._ins.get<IResponseData<T>>(url, { params })
   }
 
-  public $delete<T>(url: string, params?: Record<string, any>) {
+  $delete<T>(url: string, params?: Record<string, any>) {
     return this._ins.delete<IResponseData<T>>(url, { params })
   }
 
-  public $post<T>(url: string, data: Record<string, any>, config: AxiosRequestConfig) {
+  $post<T>(url: string, data: Record<string, any>, config: AxiosRequestConfig) {
     return this._ins.post<IResponseData<T>>(url, data, config)
   }
 
-  public $put<T>(url: string, data: Record<string, any>, config: AxiosRequestConfig) {
+  $put<T>(url: string, data: Record<string, any>, config: AxiosRequestConfig) {
     return this._ins.put<IResponseData<T>>(url, data, config)
   }
 
-  public static getInstance<T>(config: UserConfig<T>): HttpRequest {
+  static getInstance(config: UserConfig): HttpRequest {
     if (!HttpRequest.instance)
       HttpRequest.instance = new HttpRequest(config)
 
     return HttpRequest.instance
   }
 }
-
-// export const http = HttpRequest.getInstance()
