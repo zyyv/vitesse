@@ -7,7 +7,7 @@ const count = ref(0)
 </script>
 
 <template>
-  <div flex flex-col items-center>
+  <div>
     <h1 py-2>
       {{ msg }}
     </h1>
