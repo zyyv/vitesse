@@ -10,7 +10,7 @@ import Markdown from 'vite-plugin-md'
 import ViteImages from 'vite-plugin-vue-images'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
 
-const pathResolve = (src: string) => resolve(__dirname, src)
+const r = (src: string) => resolve(__dirname, src)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
@@ -33,9 +33,9 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': pathResolve('src'),
-      '@a': pathResolve('src/assets'),
-      '@s': pathResolve('src/modules/pinia')
+      '@': r('src'),
+      '@a': r('src/assets'),
+      '@s': r('src/modules/pinia')
     }
   },
   optimizeDeps: {
