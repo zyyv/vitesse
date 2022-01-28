@@ -1,7 +1,7 @@
 <script lang="ts" setup name="Home">
 import { deepClone } from '@chris-zhu/utils'
 import { useUserStore } from '@s/index'
-import { toggleLocales } from '@u/index'
+import { isDark, toggleDark, toggleLocales } from '@u/index'
 const { t } = useI18n()
 const { name } = storeToRefs(useUserStore())
 
@@ -12,21 +12,32 @@ const test = reactive(deepClone({ comon: ':' }))
 <template>
   <div>
     <header f-c justify-end py-2 px-5>
+      <button
+        bg-inherit
+        border-none
+        mr-5
+        @click="toggleDark"
+      >
+        <div
+          v-if="!isDark"
+          icon-btn
+          class="i-carbon:light-filled"
+        />
+        <div
+          v-else
+          icon-btn
+          class="i-akar-icons:moon-fill"
+        />
+      </button>
       <Navlink to="https://github.com/chris-zhu/modele">
         <div
-          hover="text-lightblue cursor-pointer"
-          text-black-800
-          w-6
-          h-6
+          icon-btn
           mr-5
           class="i-carbon:logo-github"
         />
       </Navlink>
       <div
-        text-black-800
-        hover="text-lightblue cursor-pointer"
-        w-6
-        h-6
+        icon-btn
         class="i-carbon:language"
         @click="toggleLocales"
       />
