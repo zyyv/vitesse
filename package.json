@@ -25,6 +25,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
+    "@chris-zhu/utils": "^0.0.6",
     "@vueuse/core": "^7.5.3",
     "axios": "^0.25.0",
     "pinia": "^2.0.9",

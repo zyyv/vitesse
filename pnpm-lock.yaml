@@ -2,6 +2,7 @@ lockfileVersion: 5.3
 
 specifiers:
   '@chris-zhu/eslint-config': ^0.0.4
+  '@chris-zhu/utils': ^0.0.6
   '@iconify-json/carbon': ^1.0.14
   '@iconify-json/logos': ^1.0.4
   '@intlify/vite-plugin-vue-i18n': ^3.2.1
@@ -28,6 +29,7 @@ specifiers:
   vue-tsc: ^0.29.8
 
 dependencies:
+  '@chris-zhu/utils': 0.0.6
   '@vueuse/core': 7.5.4_vue@3.2.29
   axios: 0.25.0
   pinia: 2.0.9_typescript@4.5.5+vue@3.2.29
@@ -188,6 +190,10 @@ packages:
       - supports-color
       - typescript
     dev: true
+
+  /@chris-zhu/utils/0.0.6:
+    resolution: {integrity: sha512-inG8EWjkvR5gi3VHhPee+j0dJK1dBawAR5KD1NsS3YbcyPoJ3H5Z1o/ACPhxpPviVyM0fOYA9PHPFv5b9yAPuA==}
+    dev: false
 
   /@emmetio/abbreviation/2.2.2:
     resolution: {integrity: sha512-TtE/dBnkTCct8+LntkqVrwqQao6EnPAs1YN3cUgxOxTaBlesBCY37ROUAVZrRlG64GNnVShdl/b70RfAI3w5lw==}

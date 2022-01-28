@@ -1,8 +1,12 @@
 <script lang="ts" setup name="Home">
+import { deepClone } from '@chris-zhu/utils'
 import { useUserStore } from '@s/index'
 import { toggleLocales } from '@u/index'
 const { t } = useI18n()
 const { name } = storeToRefs(useUserStore())
+
+const test = reactive(deepClone({ comon: ':' }))
+
 </script>
 
 <template>
@@ -40,7 +44,7 @@ const { name } = storeToRefs(useUserStore())
         </button>
       </Navlink>
       <p mt-10>
-        pinia userStore: <input v-model="name">
+        pinia userStore{{ test.comon }} <input v-model="name">
       </p>
     </div>
   </div>
