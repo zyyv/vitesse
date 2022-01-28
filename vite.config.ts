@@ -9,6 +9,7 @@ import Layouts from 'vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
 import ViteImages from 'vite-plugin-vue-images'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
+import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
 const r = (src: string) => resolve(__dirname, src)
 // https://vitejs.dev/config/
@@ -19,7 +20,7 @@ export default defineConfig({
     Pages({ extensions: ['vue', 'md'] }),
     Layouts(),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core', { axios: [['default', 'axios']] }],
+      imports: ['vue', 'pinia', 'vue-router', 'vue-i18n', '@vueuse/core', { axios: [['default', 'axios']] }],
       dts: 'src/auto-imports.d.ts'
     }),
     Components({
@@ -29,13 +30,19 @@ export default defineConfig({
     }),
     Markdown(),
     ViteImages(),
-    VueSetupExtend()
+    VueSetupExtend(),
+    VueI18n({
+      runtimeOnly: true,
+      compositionOnly: true,
+      include: [r('locales/**')]
+    })
   ],
   resolve: {
     alias: {
       '@': r('src'),
       '@a': r('src/assets'),
-      '@s': r('src/modules/pinia')
+      '@s': r('src/modules/pinia'),
+      '@u': r('src/composables')
     }
   },
   optimizeDeps: {

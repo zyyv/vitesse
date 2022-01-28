@@ -1,4 +1,4 @@
-import { HttpRequest } from '@/use'
+import { HttpRequest } from '@/composables'
 import type { UserModule } from '@/types'
 
 export const http = HttpRequest.getInstance({

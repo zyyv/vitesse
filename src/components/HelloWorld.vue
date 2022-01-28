@@ -7,11 +7,11 @@ const count = ref(0)
 </script>
 
 <template>
-  <div>
-    <h1 py-2>
+  <div f-c-c>
+    <img w-30 :src="Logo">
+    <p py-5>
       {{ msg }}
-    </h1>
-
+    </p>
     <button type="button" @click="count++">
       count is: {{ count }}
     </button>
