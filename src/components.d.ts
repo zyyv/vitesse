@@ -5,6 +5,7 @@
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./components/HelloWorld.vue')['default']
+    Navlink: typeof import('./components/Navlink.vue')['default']
   }
 }
 

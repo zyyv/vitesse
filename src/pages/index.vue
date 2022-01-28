@@ -1,28 +1,45 @@
 <script lang="ts" setup name="Home">
-import { useUserStore } from '@s'
-
-const router = useRouter()
+import { useUserStore } from '@s/index'
+import { toggleLocales } from '@u/index'
+const { t } = useI18n()
 const { name } = storeToRefs(useUserStore())
 </script>
 
 <template>
-  <div>
-    <HelloWorld msg="I'm Hello World Component" />
-    <div pr w-100 h-100>
-      <div p-c>
-        <img :src="Logo">
-      </div>
-    </div>
-    <div p-c class="i-logos-vue text-3xl" />
-    <p text-xxl font-lobster>
-      >>===
+  <header f-c justify-end py-2 px-5>
+    <Navlink to="https://github.com/chris-zhu/modele">
+      <div
+        hover="text-lightblue cursor-pointer"
+        text-black-800
+        w-6
+        h-6
+        mr-5
+        class="i-carbon:logo-github"
+      />
+    </Navlink>
+    <div
+      text-black-800
+      hover="text-lightblue cursor-pointer"
+      w-6
+      h-6
+      class="i-carbon:language"
+      @click="toggleLocales"
+    />
+  </header>
+  <div b-1 p-4 f-c>
+    <HelloWorld :msg="t('hello.msg')" />
+  </div>
+  <div f-c-c>
+    <p mt-10 text="xl center" font-lobster>
+      {{ t("intro.desc") }}
     </p>
-    <div mt-8 flex flex-col items-center>
-      <button px-4 py-2 text-blue @click="router.push('/about')">
-        About
+    <Navlink to="/about">
+      <button mt-10 px-4 py-2 text-blue>
+        {{ t("button.about") }}
       </button>
-      <img :src="Logo">
-      <p>pinia userStore: <input v-model="name"></p>
-    </div>
+    </Navlink>
+    <p mt-10>
+      pinia userStore: <input v-model="name">
+    </p>
   </div>
 </template>

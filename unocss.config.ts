@@ -6,7 +6,8 @@ export default defineConfig({
     presetUno(),
     presetIcons({
       collections: {
-        logos: () => import('@iconify-json/logos/icons.json').then(i => i.default as any)
+        logos: () => import('@iconify-json/logos/icons.json').then(i => i.default as any),
+        carbon: () => import('@iconify-json/carbon/icons.json').then(i => i.default as any)
       },
       scale: 1.2
     }),

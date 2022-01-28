@@ -1,5 +1,5 @@
 import App from './App.vue'
-import { createCtx } from './use'
+import { createCtx } from './composables'
 import 'uno.css'
 import '@/styles/index.scss'
 
