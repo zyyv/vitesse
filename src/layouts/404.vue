@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const router = useRouter()
+const { t } = useI18n()
 </script>
 
 <template>
@@ -7,10 +8,10 @@ const router = useRouter()
     <router-view />
     <div>
       <button
-        class="btn m-3 text-sm mt-8"
+        class="bg-gray-400 px-4 cursor-pointer border-none rounded-1 outline-none py-2 text-white-500 m-3 text-sm mt-8"
         @click="router.back()"
       >
-        back
+        {{ t('button.back') }}
       </button>
     </div>
   </main>
