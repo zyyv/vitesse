@@ -1,6 +1,6 @@
 {
-  "name": "vue3-template",
-  "version": "0.0.2",
+  "name": "modele",
+  "version": "1.0.0",
   "description": "一个麻雀虽小但五脏俱全的Vue3模板。（A stronger template with Vue3）",
   "main": "src/main.ts",
   "keywords": [
