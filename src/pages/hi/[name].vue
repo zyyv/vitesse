@@ -1,0 +1,55 @@
+<script setup lang="ts">
+import { useUserStore } from '@s/index'
+
+const props = defineProps<{ name: string }>()
+const router = useRouter()
+const user = useUserStore()
+const { t } = useI18n()
+
+watchEffect(() => {
+  user.setNewName(props.name)
+})
+
+useTitle(`Modele | ${props.name}`)
+</script>
+
+<template>
+  <div f-c-c>
+    <p>
+      {{ t('intro.hi', { name: props.name }) }}
+    </p>
+
+    <p py-4 text-sm op-50>
+      <em>{{ t('intro.dynamic-route') }}</em>
+    </p>
+
+    <template v-if="user.otherNames.length">
+      <p text-sm mt-4>
+        <span opacity-75>{{ t('intro.aka') }}:</span>
+        <ul>
+          <li v-for="otherName in user.otherNames" :key="otherName">
+            <Navlink :to="`/hi/${otherName}`" replace>
+              {{ otherName }}
+            </Navlink>
+          </li>
+        </ul>
+      </p>
+    </template>
+
+    <div>
+      <button
+        m-3
+        px-3
+        py-1
+        cursor-pointer
+        text="sm black-200 dark:gray"
+        border="~ rounded"
+        bg-gray-100
+        dark:bg-gray-700
+        @click="router.back()"
+      >
+        {{ t('button.back') }}
+      </button>
+    </div>
+  </div>
+</template>

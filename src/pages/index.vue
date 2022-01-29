@@ -1,16 +1,22 @@
-<script lang="ts" setup name="Home">
-import { deepClone } from '@chris-zhu/utils'
+<script setup lang="ts" name="Home">
 import { useUserStore } from '@s/index'
 import { isDark, toggleDark, toggleLocales } from '@u/index'
 const { t } = useI18n()
-const { name } = storeToRefs(useUserStore())
 
-const test = reactive(deepClone({ comon: ':' }))
+const user = useUserStore()
+const name = ref(user.savedName)
 
+const router = useRouter()
+const go = () => {
+  if (name.value)
+    router.push(`/hi/${encodeURIComponent(name.value)}`)
+}
+
+useTitle('Modele | Home')
 </script>
 
 <template>
-  <div>
+  <div f-c-c>
     <header f-c justify-end py-2 px-5>
       <button
         bg-inherit
@@ -42,21 +48,41 @@ const test = reactive(deepClone({ comon: ':' }))
         @click="toggleLocales"
       />
     </header>
-    <div b-1 p-4 f-c>
-      <HelloWorld :msg="t('hello.msg')" />
-    </div>
-    <div f-c-c>
-      <p mt-10 text="xl center" font-lobster>
-        {{ t("intro.desc") }}
-      </p>
-      <Navlink to="/about">
-        <button mt-10 px-4 py-2 text-blue>
-          {{ t("button.about") }}
-        </button>
-      </Navlink>
-      <p mt-10>
-        pinia userStore{{ test.comon }} <input v-model="name">
-      </p>
+    <p py-4>
+      <em mt-10 text="sm center" op-75 font-lobster>{{ t('intro.desc') }}</em>
+    </p>
+
+    <input
+      id="input"
+      v-model="name"
+      :placeholder="t('intro.whats-your-name')"
+      :aria-label="t('intro.whats-your-name')"
+      type="text"
+      autocomplete="false"
+      p="x-4 y-2"
+      w="250px"
+      text="center black-200 dark:gray"
+      bg="transparent"
+      border="~ rounded gray-200 dark:gray-700"
+      outline="none active:none"
+      @keydown.enter="go"
+    >
+
+    <div>
+      <button
+        m-3
+        px-3
+        py-1
+        cursor-pointer
+        text="sm black-200 dark:gray"
+        border="~ rounded"
+        bg-gray-100
+        dark:bg-gray-700
+        :disabled="!name"
+        @click="go"
+      >
+        {{ t('button.go') }}
+      </button>
     </div>
   </div>
 </template>
