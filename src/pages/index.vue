@@ -83,6 +83,20 @@ useTitle('Modele | Home')
       >
         {{ t('button.go') }}
       </button>
+      <Navlink :to="`/${Math.floor(Math.random() * 10)}`">
+        <button
+          m-3
+          px-3
+          py-1
+          cursor-pointer
+          text="sm black-200 dark:gray"
+          border="~ rounded"
+          bg-gray-100
+          dark:bg-gray-700
+        >
+          {{ t('not-found') }}
+        </button>
+      </Navlink>
     </div>
   </div>
 </template>
