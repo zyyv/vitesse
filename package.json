@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/chris-zhu/vue3-template#readme",
   "scripts": {
-    "dev": "vite --port=1111 --open",
+    "dev": "vite --force --port=1111 --open",
     "build": "vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "lint": "eslint \"**/*.{vue,ts,js}\"",

@@ -74,6 +74,7 @@ useTitle('Modele | Home')
         px-3
         py-1
         cursor-pointer
+        disabled:cursor-not-allowed
         text="sm black-200 dark:gray"
         border="~ rounded"
         bg-gray-100
