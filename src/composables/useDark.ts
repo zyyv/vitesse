@@ -1,3 +1,2 @@
 export const isDark = useDark()
-// export const toggleDark = useDebounceFn(useToggle(isDark), 200)
-export const toggleDark = useThrottleFn(() => { useToggle(isDark)() }, 2000)
+export const toggleDark = useThrottleFn(() => { useToggle(isDark)() }, 1000, false, true)
