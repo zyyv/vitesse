@@ -25,7 +25,7 @@
     "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
-    "@chris-zhu/utils": "^0.0.6",
+    "@chris-zhu/utils": "latest",
     "@vueuse/core": "^7.5.3",
     "axios": "^0.25.0",
     "pinia": "^2.0.9",
@@ -34,7 +34,7 @@
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@chris-zhu/eslint-config": "^0.0.4",
+    "@chris-zhu/eslint-config": "^0.0.5",
     "@iconify-json/akar-icons": "^1.0.8",
     "@iconify-json/carbon": "^1.0.14",
     "@iconify-json/logos": "^1.0.4",
@@ -44,15 +44,15 @@
     "eslint": "^8.6.0",
     "sass": "^1.48.0",
     "typescript": "^4.4.4",
-    "unocss": "^0.22.2",
+    "unocss": "latest",
     "unplugin-auto-import": "^0.5.11",
     "unplugin-vue-components": "^0.17.11",
     "vite": "^2.7.2",
     "vite-plugin-md": "^0.11.7",
     "vite-plugin-pages": "^0.20.0",
     "vite-plugin-vue-images": "^0.6.1",
-    "vite-plugin-vue-layouts": "^0.5.0",
-    "vite-plugin-vue-setup-extend": "^0.3.0",
-    "vue-tsc": "^0.29.8"
+    "vite-plugin-vue-layouts": "^0.6.0",
+    "vite-plugin-vue-setup-extend": "^0.4.0",
+    "vue-tsc": "^0.31.2"
   }
 }
