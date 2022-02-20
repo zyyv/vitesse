@@ -7,3 +7,5 @@ export interface IResponseData<T> {
   data?: T
   msg: string
 }
+
+export type MaybeArray<T> = T | Array<T>
