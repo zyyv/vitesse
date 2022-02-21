@@ -2,27 +2,23 @@ import { isArray } from '@chris-zhu/utils'
 import { http } from '@/modules/http'
 import type { IApis, METHODS } from '.'
 
-type fn<P, C> = (p: P, c: C) => any | Promise<any> // P: params C: config
-
-interface fns<P, C> extends Record<string, fn<P, C>> {}
-
-interface ResultApi<P, C> {
-  [key: string]: fns<P, C> | fn<P, C>
+type ResultApi<T> = {
+  [P in keyof T]: Promise<T[P]>
 }
 
-function transform<P=any, C=any>(apis: IApis): ResultApi<P, C> {
-  return Object.fromEntries(Object.entries(apis).map(([key, modules]) => {
+function transform<T extends keyof IApis>(apis: IApis) {
+  return Object.fromEntries((Object.entries(apis) as [T, IApis[T]][]).map(([key, modules]) => {
     if (isArray(modules)) {
-      const result = Object.create(null) as fns<P, C>
-      modules.forEach((module) => {
-        result[module.name as string] = generateHttp(module.path, module.method)
+      const result = Object.create(null)
+      modules.forEach(({ name, path, method }) => {
+        result[name!] = generateHttp(path, method)
       })
       return [key, result]
     } else {
       const result = generateHttp(modules.path, modules.method)
       return [key, result]
     }
-  }))
+  })) as ResultApi<IApis>
 }
 
 function generateHttp(path: string, method: METHODS) {

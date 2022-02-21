@@ -1,5 +1,4 @@
 import transform from './transform'
-import type { MaybeArray } from '@/types'
 
 export enum METHODS {
   GET = 'get',
@@ -12,9 +11,10 @@ interface IApi {
   path: string
   method: METHODS
 }
-
-export interface IApis extends Record<string, MaybeArray<IApi>> {}
-
+export interface IApis {
+  users: IApi[]
+  login: IApi
+}
 export const apis: IApis = {
   users: [
     { name: 'list', path: '/list', method: METHODS.GET }, // users.list()
