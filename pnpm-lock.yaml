@@ -16,7 +16,7 @@ specifiers:
   sass: 1.49.8
   typescript: 4.5.5
   unocss: latest
-  unplugin-auto-import: 0.6.0
+  unplugin-auto-import: 0.6.1
   unplugin-vue-components: 0.17.20
   vite: 2.8.4
   vite-plugin-md: 0.11.8
@@ -50,7 +50,7 @@ devDependencies:
   sass: 1.49.8
   typescript: 4.5.5
   unocss: 0.26.2_sass@1.49.8
-  unplugin-auto-import: 0.6.0_@vueuse+core@7.5.5+vite@2.8.4
+  unplugin-auto-import: 0.6.1_@vueuse+core@7.5.5+vite@2.8.4
   unplugin-vue-components: 0.17.20_vite@2.8.4+vue@3.2.30
   vite: 2.8.4_sass@1.49.8
   vite-plugin-md: 0.11.8_vite@2.8.4
@@ -3590,8 +3590,8 @@ packages:
       - supports-color
     dev: true
 
-  /unplugin-auto-import/0.6.0_@vueuse+core@7.5.5+vite@2.8.4:
-    resolution: {integrity: sha512-joItLHCozByEsKawhFTfterlZOp8EYIAOpuWKx5xq0SdLOQtvbEcfkdhLxWIsMOH9yXNY5vnXYRONW0XxjVDlg==}
+  /unplugin-auto-import/0.6.1_@vueuse+core@7.5.5+vite@2.8.4:
+    resolution: {integrity: sha512-rSukyyROmSkqL9tjkA88oLhpG4tXYkk2rTpqGaYKjXRNktHEKf03pit8bamPt95KPVfMLjT0+TPKi6ju0toOIw==}
     engines: {node: '>=14'}
     peerDependencies:
       '@vueuse/core': '*'
