@@ -5,7 +5,7 @@ specifiers:
   '@chris-zhu/utils': latest
   '@iconify-json/akar-icons': 1.1.0
   '@iconify-json/carbon': 1.1.1
-  '@iconify-json/logos': 1.1.2
+  '@iconify-json/logos': 1.1.3
   '@intlify/vite-plugin-vue-i18n': 3.3.0
   '@types/node': 17.0.18
   '@vitejs/plugin-vue': 2.2.2
@@ -42,7 +42,7 @@ devDependencies:
   '@chris-zhu/eslint-config': 0.0.5_eslint@8.11.0+typescript@4.6.2
   '@iconify-json/akar-icons': 1.1.0
   '@iconify-json/carbon': 1.1.1
-  '@iconify-json/logos': 1.1.2
+  '@iconify-json/logos': 1.1.3
   '@intlify/vite-plugin-vue-i18n': 3.3.0_ce828d16c4e80881af0d3b7928628a00
   '@types/node': 17.0.18
   '@vitejs/plugin-vue': 2.2.2_vite@2.8.4+vue@3.2.30
@@ -237,8 +237,8 @@ packages:
       '@iconify/types': 1.0.12
     dev: true
 
-  /@iconify-json/logos/1.1.2:
-    resolution: {integrity: sha512-cZ19VRfAZkSm8wa/5AIbgxJLP77saOOpY6Tz3GqZCr9mFyS/p36W5zk+KzPxmF9aN2X1FKxQrIMW2o+TNkCTww==}
+  /@iconify-json/logos/1.1.3:
+    resolution: {integrity: sha512-RSBjoqoYaJX/M6wRbpEey5Da6ri9Te5f3wx2dkPAhbv039pK5m2uthuSjQbC0sZk7xWlMBj852xXvagavbgnpw==}
     dependencies:
       '@iconify/types': 1.0.12
     dev: true
