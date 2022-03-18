@@ -22,7 +22,7 @@ function transform<T extends keyof IApis>(apis: IApis) {
 }
 
 function generateHttp(path: string, method: METHODS) {
-  return <T>(params?: any, config?: any) => http[`$${method}`]<T>(path, params, config)
+  return <T>(params?: unknown, config?: any) => http[`$${method}`]<T>(path, params, config)
 }
 
 export default transform
