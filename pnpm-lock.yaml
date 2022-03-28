@@ -17,7 +17,7 @@ specifiers:
   typescript: 4.6.2
   unocss: latest
   unplugin-auto-import: 0.6.1
-  unplugin-vue-components: 0.17.20
+  unplugin-vue-components: 0.18.5
   vite: 2.8.4
   vite-plugin-md: 0.12.4
   vite-plugin-pages: 0.20.2
@@ -51,7 +51,7 @@ devDependencies:
   typescript: 4.6.2
   unocss: 0.30.6
   unplugin-auto-import: 0.6.1_@vueuse+core@7.5.5+vite@2.8.4
-  unplugin-vue-components: 0.17.20_vite@2.8.4+vue@3.2.30
+  unplugin-vue-components: 0.18.5_vite@2.8.4+vue@3.2.30
   vite: 2.8.4_sass@1.49.8
   vite-plugin-md: 0.12.4_vite@2.8.4
   vite-plugin-pages: 0.20.2_vite@2.8.4
@@ -67,12 +67,6 @@ packages:
     dependencies:
       execa: 5.1.1
       find-up: 5.0.0
-    dev: true
-
-  /@antfu/utils/0.4.0:
-    resolution: {integrity: sha512-gqkpvjkgFUu+s3kP+Ly33OKpo5zvVY3FDFhv5BIb98SncS3KD6DNxPfNDjwHIoyXbz1leWo1j8DtRLZ1D2Jv+Q==}
-    dependencies:
-      '@types/throttle-debounce': 2.1.0
     dev: true
 
   /@antfu/utils/0.5.0:
@@ -424,10 +418,6 @@ packages:
 
   /@types/normalize-package-data/2.4.1:
     resolution: {integrity: sha512-Gj7cI7z+98M282Tqmp2K5EIsoouUEzbBJhQQzDE3jSIRk6r9gsz0oUokqIUR4u1R3dMHo0pDHM7sNOHyhulypw==}
-    dev: true
-
-  /@types/throttle-debounce/2.1.0:
-    resolution: {integrity: sha512-5eQEtSCoESnh2FsiLTxE121IiE60hnMqcb435fShf4bpLRjEu1Eoekht23y6zXS9Ts3l+Szu3TARnTsA0GkOkQ==}
     dev: true
 
   /@typescript-eslint/eslint-plugin/5.10.2_ba1c20829c1baeb0722e85afbd6a1b8d:
@@ -1041,6 +1031,12 @@ packages:
     dependencies:
       balanced-match: 1.0.2
       concat-map: 0.0.1
+    dev: true
+
+  /brace-expansion/2.0.1:
+    resolution: {integrity: sha512-XnAIvQ8eM+kC6aULx6wuQiwVsnzsi9d3WxzV3FpWTGA19F621kwdbsAcFKXgKUHZWsy+mY6iL1sHTxWEFCytDA==}
+    dependencies:
+      balanced-match: 1.0.2
     dev: true
 
   /braces/3.0.2:
@@ -2663,6 +2659,13 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
+  /minimatch/5.0.1:
+    resolution: {integrity: sha512-nLDxIFRyhDblz3qMuq+SoRZED4+miJ/G+tdDrjkkkRnjAsBexeGpgjLEQ0blJy7rHhR2b93rhQY4SvyWu9v03g==}
+    engines: {node: '>=10'}
+    dependencies:
+      brace-expansion: 2.0.1
+    dev: true
+
   /minimist/1.2.5:
     resolution: {integrity: sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==}
     dev: true
@@ -3416,8 +3419,8 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-vue-components/0.17.20_vite@2.8.4+vue@3.2.30:
-    resolution: {integrity: sha512-YSofs2RFzLUZWnMyEZ25PnK1WR6etiS2Wl2TdU5T6nvyvn9HqUD54V5JAdKmybgLym6M+YoOE+Mzxtj/bTWDpQ==}
+  /unplugin-vue-components/0.18.5_vite@2.8.4+vue@3.2.30:
+    resolution: {integrity: sha512-VPA6z/4pcKRDYtWu1H+FIpV0MADlFKG3q7YMVFzNFC3EhMVZ4WuBJ76490oKyauguNw1T1obLCuxNU9JzJ0oAQ==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -3429,16 +3432,16 @@ packages:
       '@babel/traverse':
         optional: true
     dependencies:
-      '@antfu/utils': 0.4.0
-      '@rollup/pluginutils': 4.1.2
+      '@antfu/utils': 0.5.0
+      '@rollup/pluginutils': 4.2.0
       chokidar: 3.5.3
-      debug: 4.3.3
+      debug: 4.3.4
       fast-glob: 3.2.11
       local-pkg: 0.4.1
-      magic-string: 0.25.7
-      minimatch: 3.0.5
+      magic-string: 0.26.1
+      minimatch: 5.0.1
       resolve: 1.22.0
-      unplugin: 0.3.2_vite@2.8.4
+      unplugin: 0.4.0_vite@2.8.4
       vue: 3.2.30
     transitivePeerDependencies:
       - esbuild
@@ -3465,6 +3468,28 @@ packages:
       webpack:
         optional: true
     dependencies:
+      vite: 2.8.4_sass@1.49.8
+      webpack-virtual-modules: 0.4.3
+    dev: true
+
+  /unplugin/0.4.0_vite@2.8.4:
+    resolution: {integrity: sha512-4ScITEmzlz1iZW3tkz+3L1V5k/xMQ6kjgm4lEXKxH0ozd8/OUWfiSA7RMRyrawsvq/t50JIzPpp1UyuSL/AXkA==}
+    peerDependencies:
+      esbuild: '>=0.13'
+      rollup: ^2.50.0
+      vite: ^2.3.0
+      webpack: 4 || 5
+    peerDependenciesMeta:
+      esbuild:
+        optional: true
+      rollup:
+        optional: true
+      vite:
+        optional: true
+      webpack:
+        optional: true
+    dependencies:
+      chokidar: 3.5.3
       vite: 2.8.4_sass@1.49.8
       webpack-virtual-modules: 0.4.3
     dev: true
@@ -3667,7 +3692,7 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
     dependencies:
-      debug: 4.3.3
+      debug: 4.3.4
       eslint: 8.11.0
       eslint-scope: 7.1.1
       eslint-visitor-keys: 3.3.0
