@@ -47,7 +47,7 @@
     "unocss": "latest",
     "unplugin-auto-import": "0.6.1",
     "unplugin-vue-components": "0.17.20",
-    "vite": "2.8.4",
+    "vite": "2.9.1",
     "vite-plugin-md": "0.12.4",
     "vite-plugin-pages": "0.20.2",
     "vite-plugin-vue-images": "0.6.1",
