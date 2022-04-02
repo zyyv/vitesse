@@ -8,8 +8,8 @@ export default defineConfig({
       collections: {
         'logos': () => import('@iconify-json/logos/icons.json').then(i => i.default as any),
         'carbon': () => import('@iconify-json/carbon/icons.json').then(i => i.default as any),
-        'akar-icons': () => import('@iconify-json/akar-icons/icons.json').then(i => i.default as any)
-      }
+        'akar-icons': () => import('@iconify-json/akar-icons/icons.json').then(i => i.default as any),
+      },
     }),
     presetWebFonts({
       fonts: {
@@ -22,28 +22,28 @@ export default defineConfig({
           {
             name: 'Lato',
             weights: ['400', '700'],
-            italic: true
+            italic: true,
           },
           {
             name: 'sans-serif',
-            provider: 'none'
-          }
-        ]
-      }
-    })
+            provider: 'none',
+          },
+        ],
+      },
+    }),
   ],
   layers: {
     default: 1,
-    modele: 2
+    modele: 2,
   },
   rules: [
     ['pr', { position: 'relative' }, { layer: 'modele' }],
-    ['pa', { position: 'absolute' }, { layer: 'modele' }]
+    ['pa', { position: 'absolute' }, { layer: 'modele' }],
   ],
   shortcuts: [
     ['f-c', 'flex justify-center items-center'],
     ['f-c-c', 'f-c flex-col'],
     ['p-c', 'pa top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'],
-    ['icon-btn', 'w-5.5 h-5.5 cursor-pointer select-none transition-duration-200 ease-in-out hover:text-teal-600 dark:text-[#afbac6] dark:hover:text-[#d9dfe9]']
-  ]
+    ['icon-btn', 'w-5.5 h-5.5 cursor-pointer select-none transition-duration-200 ease-in-out hover:text-teal-600 dark:text-[#afbac6] dark:hover:text-[#d9dfe9]'],
+  ],
 })

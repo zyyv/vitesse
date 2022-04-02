@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import Logo from '@a/img/logo.png'
 
 defineProps<{ msg: string }>()
 
