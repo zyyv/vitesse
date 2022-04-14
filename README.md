@@ -5,6 +5,8 @@
 <p align="center">Build your project quickly</p>
 
 
+> Tips: Forked by [@antfu/vitesse](https://antfu/vitesse), follow genuine vitesse
+
 ## usage
 ```shell
 degit chris-zhu/vitesse <Project name>
@@ -23,6 +25,7 @@ Run
 ```shell
 pnpm dev
 ```
+
 
 
 ## Features
