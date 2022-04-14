@@ -1,7 +1,7 @@
 lockfileVersion: 5.3
 
 specifiers:
-  '@babel/types': ^7.17.0
+  '@babel/types': 7.17.0
   '@chris-zhu/eslint-config': 1.0.0
   '@chris-zhu/utils': ^0.0.9
   '@iconify-json/akar-icons': 1.1.3
