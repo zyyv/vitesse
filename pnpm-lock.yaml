@@ -20,7 +20,7 @@ specifiers:
   unplugin-vue-components: 0.19.3
   vite: 2.9.5
   vite-plugin-md: 0.12.4
-  vite-plugin-pages: 0.22.0
+  vite-plugin-pages: 0.23.0
   vite-plugin-vue-layouts: 0.6.0
   vite-plugin-vue-setup-extend: 0.4.0
   vue: ^3.2.33
@@ -53,7 +53,7 @@ devDependencies:
   unplugin-vue-components: 0.19.3_vite@2.9.5+vue@3.2.33
   vite: 2.9.5_sass@1.50.0
   vite-plugin-md: 0.12.4_vite@2.9.5
-  vite-plugin-pages: 0.22.0_vite@2.9.5
+  vite-plugin-pages: 0.23.0_vite@2.9.5
   vite-plugin-vue-layouts: 0.6.0_c6669f7f6a2bb1e4cd0ce207bade55c6
   vite-plugin-vue-setup-extend: 0.4.0_vite@2.9.5
   vue-tsc: 0.34.7_typescript@4.6.3
@@ -397,6 +397,12 @@ packages:
       picomatch: 2.3.1
     dev: true
 
+  /@types/debug/4.1.7:
+    resolution: {integrity: sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==}
+    dependencies:
+      '@types/ms': 0.7.31
+    dev: true
+
   /@types/json-schema/7.0.11:
     resolution: {integrity: sha512-wOuvG1SN4Us4rez+tylwwwCV1psiNVOkJeM3AUWUNWg/jDQY2+HE/444y5gc+jBmRqASOm2Oeh5c1axHobwRKQ==}
     dev: true
@@ -424,6 +430,10 @@ packages:
 
   /@types/mdurl/1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
+    dev: true
+
+  /@types/ms/0.7.31:
+    resolution: {integrity: sha512-iiUgKzV9AuaEkZqkOLDIvlQiL6ltuZd9tGcW3gwpnX8JbuiuhFlEGmmFXEXkN50Cvq7Os88IY2v0dkDqXYWVgA==}
     dev: true
 
   /@types/node/17.0.24:
@@ -3686,15 +3696,16 @@ packages:
       vite: 2.9.5_sass@1.50.0
     dev: true
 
-  /vite-plugin-pages/0.22.0_vite@2.9.5:
-    resolution: {integrity: sha512-OeCtSKoQNjrjtlNgkF4JTU0UdiZsa0cSQJKFyRoUz5KMbGoXR8O29BB2fZx9tMSBPyQJgGvIpzdoofLDaRNcQQ==}
+  /vite-plugin-pages/0.23.0_vite@2.9.5:
+    resolution: {integrity: sha512-KEfW6WBfACCjMXoQY0mLEzfifwCTq6FlvvtXs2XSEe9Pd4QadZTNzHOPKHDsKpVXysRzbYxE8/c/Ao9+nXsQ7w==}
     peerDependencies:
-      '@vue/compiler-sfc': '>=3'
-      vite: '>=2'
+      '@vue/compiler-sfc': ^3.0.0
+      vite: ^2.0.0
     peerDependenciesMeta:
       '@vue/compiler-sfc':
         optional: true
     dependencies:
+      '@types/debug': 4.1.7
       debug: 4.3.4
       deep-equal: 2.0.5
       fast-glob: 3.2.11
@@ -3702,7 +3713,7 @@ packages:
       local-pkg: 0.4.1
       picocolors: 1.0.0
       vite: 2.9.5_sass@1.50.0
-      yaml: 2.0.0-11
+      yaml: 2.0.1
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3917,9 +3928,9 @@ packages:
     engines: {node: '>= 6'}
     dev: true
 
-  /yaml/2.0.0-11:
-    resolution: {integrity: sha512-5kGSQrzDyjCk0BLuFfjkoUE9vYcoyrwZIZ+GnpOSM9vhkvPjItYiWJ1jpRSo0aU4QmsoNrFwDT4O7XS2UGcBQg==}
-    engines: {node: '>= 12'}
+  /yaml/2.0.1:
+    resolution: {integrity: sha512-1NpAYQ3wjzIlMs0mgdBmYzLkFgWBIWrzYVDYfrixhoFNNgJ444/jT2kUT2sicRbJES3oQYRZugjB6Ro8SjKeFg==}
+    engines: {node: '>= 14'}
     dev: true
 
   /yocto-queue/0.1.0:
