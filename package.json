@@ -34,7 +34,7 @@
     "vue-router": "^4.0.14"
   },
   "devDependencies": {
-    "@babel/types": "7.17.0",
+    "@babel/types": "7.17.10",
     "@chris-zhu/eslint-config": "1.0.0",
     "@iconify-json/akar-icons": "1.1.4",
     "@iconify-json/carbon": "1.1.3",
