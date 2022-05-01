@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@babel/types': 7.17.0
+  '@babel/types': 7.17.10
   '@chris-zhu/eslint-config': 1.0.0
   '@chris-zhu/utils': ^0.0.9
   '@iconify-json/akar-icons': 1.1.4
@@ -37,7 +37,7 @@ dependencies:
   vue-router: 4.0.14_vue@3.2.33
 
 devDependencies:
-  '@babel/types': 7.17.0
+  '@babel/types': 7.17.10
   '@chris-zhu/eslint-config': 1.0.0_5wsz2tb7zzudmaqxfve53vbauu
   '@iconify-json/akar-icons': 1.1.4
   '@iconify-json/carbon': 1.1.3
@@ -118,8 +118,8 @@ packages:
       regenerator-runtime: 0.13.9
     dev: true
 
-  /@babel/types/7.17.0:
-    resolution: {integrity: sha512-TmKSNO4D5rzhL5bjWFcVHHLETzfQ/AmbKpKPOSjlP0WoHZ6L911fgoOKY4Alp/emzG4cHJdyN49zpgkbXFEHHw==}
+  /@babel/types/7.17.10:
+    resolution: {integrity: sha512-9O26jG0mBYfGkUYCYZRnBwbVLd1UZOICEr2Em6InB6jVfsAv1GKgwXHmrSg+WFWDmeKTA6vyTZiN8tCSM5Oo3A==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
