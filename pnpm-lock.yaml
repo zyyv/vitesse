@@ -3,7 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@babel/types': 7.17.10
   '@chris-zhu/eslint-config': 1.0.0
-  '@chris-zhu/utils': ^0.0.9
+  '@chris-zhu/utils': ^0.0.12
   '@iconify-json/akar-icons': 1.1.4
   '@iconify-json/carbon': 1.1.4
   '@iconify-json/logos': 1.1.5
@@ -29,7 +29,7 @@ specifiers:
   vue-tsc: 0.34.11
 
 dependencies:
-  '@chris-zhu/utils': 0.0.9
+  '@chris-zhu/utils': 0.0.12
   '@vueuse/core': 8.3.0_vue@3.2.33
   pinia: 2.0.13_ifhmkzsxec62ezvqv7qmanm4bq
   vue: 3.2.33
@@ -177,8 +177,8 @@ packages:
       - typescript
     dev: true
 
-  /@chris-zhu/utils/0.0.9:
-    resolution: {integrity: sha512-vnakyI1MvdU4jd9KsKtNH3RSkr8xEE/t42/hMOFKPTiriC+x8Oz97a0t22s+gX/qwE4XGT2tQw6B6PEe9lLEvg==}
+  /@chris-zhu/utils/0.0.12:
+    resolution: {integrity: sha512-FK/B6YYdKGIMXH41H3E5M7iMrtic6sfnl1uNg5ByZ2WE+k+9iIhGwjCt9k4GptkXWPub7PvNW3DG/OCHvPCGdw==}
     dev: false
 
   /@eslint/eslintrc/1.2.3:
