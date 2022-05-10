@@ -19,7 +19,7 @@ specifiers:
   unplugin-auto-import: 0.7.1
   unplugin-vue-components: 0.19.5
   vite: 2.9.8
-  vite-plugin-md: 0.13.0
+  vite-plugin-md: 0.13.1
   vite-plugin-pages: 0.23.0
   vite-plugin-vue-layouts: 0.6.0
   vite-plugin-vue-setup-extend: 0.4.0
@@ -52,7 +52,7 @@ devDependencies:
   unplugin-auto-import: 0.7.1_x2hqao43pv2ecqmyg2pcxnkqei
   unplugin-vue-components: 0.19.5_vite@2.9.8+vue@3.2.33
   vite: 2.9.8_sass@1.51.0
-  vite-plugin-md: 0.13.0_vite@2.9.8
+  vite-plugin-md: 0.13.1_vite@2.9.8
   vite-plugin-pages: 0.23.0_vite@2.9.8
   vite-plugin-vue-layouts: 0.6.0_z4wmid5yf4lwn5iat3bgw5nzgm
   vite-plugin-vue-setup-extend: 0.4.0_vite@2.9.8
@@ -3801,8 +3801,8 @@ packages:
       spdx-expression-parse: 3.0.1
     dev: true
 
-  /vite-plugin-md/0.13.0_vite@2.9.8:
-    resolution: {integrity: sha512-srW6j3otbHxFaTushal6fWxrjrlyA553biB0S1Bpm2DhWL1hP4a/snjpi+5AyDVaQodMmA4Oe2hIW1IjyKa0hQ==}
+  /vite-plugin-md/0.13.1_vite@2.9.8:
+    resolution: {integrity: sha512-ZLXRuhQCFVCvxTE79CtSOj71TknT7Hube5SN3aU65k7FpsIQ8ftQhMn3PbdVjHUlQRR462IuPsTYbyXHyrOmOQ==}
     peerDependencies:
       vite: ^2.0.0
     dependencies:
