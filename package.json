@@ -26,7 +26,7 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@chris-zhu/utils": "^0.0.12",
+    "@chris-zhu/utils": "^0.0.13",
     "@vueuse/core": "^8.3.0",
     "pinia": "^2.0.13",
     "vue": "^3.2.33",
