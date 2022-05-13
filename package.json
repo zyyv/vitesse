@@ -36,7 +36,7 @@
   "devDependencies": {
     "@babel/types": "7.17.10",
     "@chris-zhu/eslint-config": "1.0.0",
-    "@iconify-json/akar-icons": "1.1.4",
+    "@iconify-json/akar-icons": "1.1.5",
     "@iconify-json/carbon": "1.1.4",
     "@iconify-json/logos": "1.1.5",
     "@intlify/vite-plugin-vue-i18n": "3.4.0",
