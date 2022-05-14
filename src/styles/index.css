@@ -1,6 +1,6 @@
 html,
 body {
-  @apply m0 p0 h-full base bg;
+  @apply h-full base bg;
 }
 
 body::-webkit-scrollbar{

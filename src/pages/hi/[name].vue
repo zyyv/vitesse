@@ -14,17 +14,17 @@ useTitle(`Modele | ${props.name}`)
 </script>
 
 <template>
-  <div f-c-c>
+  <div f-c-c gap-6 pt20>
     <p>
       {{ t('intro.hi', { name: props.name }) }}
     </p>
 
-    <p py-4 text-sm op-50>
+    <p text-sm op-50>
       <em>{{ t('intro.dynamic-route') }}</em>
     </p>
 
     <template v-if="user.otherNames.length">
-      <p text-sm mt-4>
+      <p text-sm flex gap-4>
         <span opacity-75>{{ t('intro.aka') }}:</span>
         <ul>
           <li v-for="otherName in user.otherNames" :key="otherName">
@@ -36,20 +36,17 @@ useTitle(`Modele | ${props.name}`)
       </p>
     </template>
 
-    <div>
-      <button
-        m-3
-        px-3
-        py-1
-        cursor-pointer
-        text="sm black-200 dark:gray"
-        border="~ rounded"
-        bg-gray-100
-        dark:bg-gray-700
-        @click="router.back()"
-      >
-        {{ t('button.back') }}
-      </button>
-    </div>
+    <button
+      px-3
+      py-1
+      cursor-pointer
+      text="sm black-200 dark:gray"
+      border="~ rounded"
+      bg-gray-100
+      dark:bg-gray-700
+      @click="router.back()"
+    >
+      {{ t('button.back') }}
+    </button>
   </div>
 </template>
