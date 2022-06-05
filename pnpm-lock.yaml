@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@babel/types': 7.18.0
+  '@babel/types': 7.18.4
   '@chris-zhu/eslint-config': 1.0.0
   '@chris-zhu/utils': ^0.0.13
   '@iconify-json/akar-icons': 1.1.5
@@ -37,7 +37,7 @@ dependencies:
   vue-router: 4.0.15_vue@3.2.36
 
 devDependencies:
-  '@babel/types': 7.18.0
+  '@babel/types': 7.18.4
   '@chris-zhu/eslint-config': 1.0.0_dirlon5mihsay42fpwhjobmlby
   '@iconify-json/akar-icons': 1.1.5
   '@iconify-json/carbon': 1.1.5
@@ -100,7 +100,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.18.0
+      '@babel/types': 7.18.4
     dev: true
 
   /@babel/parser/7.17.9:
@@ -108,7 +108,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.18.0
+      '@babel/types': 7.18.4
     dev: true
 
   /@babel/parser/7.18.0:
@@ -116,7 +116,7 @@ packages:
     engines: {node: '>=6.0.0'}
     hasBin: true
     dependencies:
-      '@babel/types': 7.18.0
+      '@babel/types': 7.18.4
 
   /@babel/runtime-corejs3/7.17.8:
     resolution: {integrity: sha512-ZbYSUvoSF6dXZmMl/CYTMOvzIFnbGfv4W3SEHYgMvNsFTeLaF2gkGAF4K2ddmtSK4Emej+0aYcnSC6N5dPCXUQ==}
@@ -133,8 +133,8 @@ packages:
       regenerator-runtime: 0.13.9
     dev: true
 
-  /@babel/types/7.18.0:
-    resolution: {integrity: sha512-vhAmLPAiC8j9K2GnsnLPCIH5wCrPpYIVBCWRBFDCB7Y/BXLqi/O+1RSTTM2bsmg6U/551+FCf9PNPxjABmxHTw==}
+  /@babel/types/7.18.4:
+    resolution: {integrity: sha512-ThN1mBcMq5pG/Vm2IcBmPPfyPXbd8S02rS+OBIDENdufvqC7Z/jHPCv9IcP01277aKtDI8g/2XysBN4hA8niiw==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/helper-validator-identifier': 7.16.7
@@ -3609,7 +3609,7 @@ packages:
     dev: true
 
   /to-fast-properties/2.0.0:
-    resolution: {integrity: sha512-/OaKK0xYrs3DmxRYqL/yDc+FxFUVYhDlXMhRmv3z915w2HF1tnN1omB354j8VUGO/hbRzyD6Y3sA7v7GS/ceog==}
+    resolution: {integrity: sha1-3F5pjL0HkmW8c+A3doGk5Og/YW4=}
     engines: {node: '>=4'}
 
   /to-regex-range/5.0.1:
