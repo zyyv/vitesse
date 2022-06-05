@@ -17,7 +17,7 @@ specifiers:
   typescript: 4.7.3
   unocss: 0.34.1
   unplugin-auto-import: 0.8.7
-  unplugin-vue-components: 0.19.5
+  unplugin-vue-components: 0.19.6
   vite: 2.9.9
   vite-plugin-md: 0.13.1
   vite-plugin-pages: 0.23.0
@@ -50,7 +50,7 @@ devDependencies:
   typescript: 4.7.3
   unocss: 0.34.1_vite@2.9.9
   unplugin-auto-import: 0.8.7_4xyn6ao5ngwbgzbefoyccvabvi
-  unplugin-vue-components: 0.19.5_vite@2.9.9+vue@3.2.36
+  unplugin-vue-components: 0.19.6_vite@2.9.9+vue@3.2.36
   vite: 2.9.9_sass@1.51.0
   vite-plugin-md: 0.13.1_vite@2.9.9
   vite-plugin-pages: 0.23.0_vite@2.9.9
@@ -2832,13 +2832,6 @@ packages:
     dependencies:
       sourcemap-codec: 1.4.8
 
-  /magic-string/0.26.1:
-    resolution: {integrity: sha512-ndThHmvgtieXe8J/VGPjG+Apu7v7ItcD5mhEIvOscWjPF/ccOiLxHaSuCAS2G+3x4GKsAbT8u7zdyamupui8Tg==}
-    engines: {node: '>=12'}
-    dependencies:
-      sourcemap-codec: 1.4.8
-    dev: true
-
   /magic-string/0.26.2:
     resolution: {integrity: sha512-NzzlXpclt5zAbmo6h6jNc8zl2gNRGHvmsZW4IvZhTC4W7k4OlLP+S5YLussa/r3ixNT66KOQfNORlXHSOy/X4A==}
     engines: {node: '>=12'}
@@ -2951,7 +2944,7 @@ packages:
     dev: true
 
   /ms/2.0.0:
-    resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
+    resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
 
   /ms/2.1.2:
@@ -3782,8 +3775,8 @@ packages:
       - webpack
     dev: true
 
-  /unplugin-vue-components/0.19.5_vite@2.9.9+vue@3.2.36:
-    resolution: {integrity: sha512-cIC+PdQEXmG+B1gmZGk4hws2xP+00C6pg3FD6ixEgRyW+WF+QXQW/60pc+hUhtDYs1PFE+23K3NY7yvYTnDDTA==}
+  /unplugin-vue-components/0.19.6_vite@2.9.9+vue@3.2.36:
+    resolution: {integrity: sha512-APvrJ9Hpid1MLT0G4PWerMJgARhNw6dzz0pcCwCxaO2DR7VyvDacMqjOQNC6ukq7FSw3wzD8VH+9i3EFXwkGmw==}
     engines: {node: '>=14'}
     peerDependencies:
       '@babel/parser': ^7.15.8
@@ -3795,13 +3788,13 @@ packages:
       '@babel/traverse':
         optional: true
     dependencies:
-      '@antfu/utils': 0.5.1
+      '@antfu/utils': 0.5.2
       '@rollup/pluginutils': 4.2.1
       chokidar: 3.5.3
       debug: 4.3.4
       fast-glob: 3.2.11
       local-pkg: 0.4.1
-      magic-string: 0.26.1
+      magic-string: 0.26.2
       minimatch: 5.0.1
       resolve: 1.22.0
       unplugin: 0.6.3_vite@2.9.9
