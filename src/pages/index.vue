@@ -16,35 +16,32 @@ useTitle('Modele | Home')
 </script>
 
 <template>
-  <div f-c-c>
-    <header f-c justify-end py-2 px-5>
+  <div f-c-c h-screen>
+    <header flex gap-5 py-2 px-5>
       <button
         bg-inherit
         border-none
-        mr-5
         @click="toggleDark"
       >
         <div
           v-if="!isDark"
           icon-btn
-          class="i-carbon:light-filled"
+          i-carbon:light-filled
         />
         <div
           v-else
           icon-btn
-          class="i-akar-icons:moon-fill"
+          i-akar-icons:moon-fill
         />
       </button>
-      <Navlink to="https://github.com/chris-zhu/modele">
-        <div
-          icon-btn
-          mr-5
-          class="i-carbon:logo-github"
-        />
-      </Navlink>
+      <Navlink
+        icon-btn
+        i-carbon:logo-github
+        to="https://github.com/chris-zhu/modele"
+      />
       <div
         icon-btn
-        class="i-carbon:language"
+        i-carbon:language
         @click="toggleLocales"
       />
     </header>
