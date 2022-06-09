@@ -1,7 +1,11 @@
 <template>
-  <main class="text-gray-700 dark:text-[#afbac6]">
+  <main>
     <router-view v-slot="{ Component, route }">
-      <transition :name="route.meta.transition || 'fade'" mode="out-in">
+      <transition
+        enter-active-class="animate-fade-in animate-duration-500"
+        leave-active-class="animate-fade-out animate-duration-500"
+        mode="out-in"
+      >
         <keep-alive>
           <component :is="Component" :key="route.name" />
         </keep-alive>
