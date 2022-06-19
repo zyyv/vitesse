@@ -5,7 +5,7 @@
 <p align="center">Build your project quickly</p>
 
 
-> Tips: From [@antfu/vitesse](https://antfu/vitesse) fork, follow genuine vitesse.
+> Tips: From [@antfu/vitesse](https://github.com/antfu/vitesse) fork, follow genuine vitesse.
 
 ## usage
 ```shell
