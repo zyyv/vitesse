@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@babel/types": "7.18.9",
-    "@chris-zhu/eslint-config": "1.0.0",
+    "@chris-zhu/eslint-config": "1.0.5",
     "@iconify-json/akar-icons": "1.1.5",
     "@iconify-json/carbon": "1.1.6",
     "@iconify-json/logos": "1.1.10",
