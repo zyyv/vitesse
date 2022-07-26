@@ -38,7 +38,7 @@
     "@chris-zhu/eslint-config": "1.0.0",
     "@iconify-json/akar-icons": "1.1.5",
     "@iconify-json/carbon": "1.1.6",
-    "@iconify-json/logos": "1.1.10",
+    "@iconify-json/logos": "1.1.13",
     "@intlify/vite-plugin-vue-i18n": "5.0.0",
     "@types/node": "18.0.6",
     "@vitejs/plugin-vue": "3.0.1",
