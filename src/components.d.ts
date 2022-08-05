@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Counter: typeof import('./components/Counter.vue')['default']
     HelloWorld: typeof import('./components/Counter.vue')['default']
     Navlink: typeof import('./components/Navlink.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
