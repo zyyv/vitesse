@@ -19,5 +19,5 @@
     },
     "types": ["vite/client", "vite-plugin-pages/client", "vite-plugin-vue-layouts/client"]
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "unocss.config.ts"]
+  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue", "uno.config.ts"]
 }

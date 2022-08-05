@@ -15,7 +15,7 @@ const r = (src: string) => resolve(__dirname, src)
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    Vue({ script: { refSugar: true }, include: [/\.vue$/, /\.md$/] }),
+    Vue({ reactivityTransform: true, include: [/\.vue$/, /\.md$/] }),
     Unocss(),
     Pages({ extensions: ['vue', 'md'] }),
     Layouts(),

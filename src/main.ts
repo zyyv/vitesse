@@ -2,5 +2,6 @@ import App from './App.vue'
 import { createCtx } from './composables'
 import 'uno.css'
 import '@/styles/index.css'
+import type { GlobModule } from './types'
 
-createCtx(App, app => Object.values(import.meta.globEager('./modules/*/index.ts')).forEach(i => i.install?.(app)))
+createCtx(App, app => Object.values(import.meta.glob('./modules/*/index.ts', { eager: true })).forEach(i => (i as GlobModule).install?.(app)))

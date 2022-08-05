@@ -2,8 +2,8 @@
   <main>
     <router-view v-slot="{ Component, route }">
       <transition
-        enter-active-class="animate-fade-in animate-duration-500"
-        leave-active-class="animate-fade-out animate-duration-500"
+        enter-active-class="animate-fade-in animate-duration-300"
+        leave-active-class="animate-fade-out animate-duration-300"
         mode="out-in"
       >
         <keep-alive>
