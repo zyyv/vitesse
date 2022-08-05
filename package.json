@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@chris-zhu/utils": "^0.0.15",
+    "@unocss/reset": "^0.45.4",
     "@vueuse/core": "^9.1.0",
     "pinia": "^2.0.17",
     "vue": "^3.2.37",

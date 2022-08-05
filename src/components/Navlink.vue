@@ -1,9 +1,12 @@
 <script lang='ts' setup>
-const props = defineProps<{
-  to: string
-  activeClass?: string
-  inactiveClass?: string
-}>()
+const props = withDefaults(defineProps<{
+  to: string;
+  replace?: boolean;
+  activeClass?: string;
+  inactiveClass?: string;
+}>(), {
+  activeClass: '',
+})
 
 const isExternalLink = computed(() => {
   return typeof props.to === 'string' && props.to.startsWith('http')
@@ -16,20 +19,16 @@ const isExternalLink = computed(() => {
     no-underline
     outline-none
     v-bind="$attrs"
-    :href="to"
+    :href="to as string"
     target="_blank"
   >
     <slot />
   </a>
-  <router-link
-    v-else
-    v-slot="{ isActive, href, navigate }"
-    v-bind="$props"
-    custom
-  >
+  <router-link v-else v-slot="{ isActive, href, navigate }" v-bind="$props" custom>
     <a
       v-bind="$attrs"
       :href="href"
+      class="no-underline"
       :class="isActive ? activeClass : inactiveClass"
       @click="navigate"
     >

@@ -1,5 +1,6 @@
 import App from './App.vue'
 import { createCtx } from './composables'
+import '@unocss/reset/tailwind.css'
 import 'uno.css'
 import '@/styles/index.css'
 import type { GlobModule } from './types'
