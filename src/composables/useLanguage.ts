@@ -1,4 +1,4 @@
-import { i18n } from '@/modules/i18n'
+import { i18n } from '~/modules/i18n'
 
 const { global: { availableLocales, locale } } = i18n
 export const toggleLocales = () => {

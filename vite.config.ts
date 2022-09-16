@@ -8,7 +8,7 @@ import Pages from 'vite-plugin-pages'
 import Layouts from 'vite-plugin-vue-layouts'
 import Markdown from 'vite-plugin-md'
 import VueSetupExtend from 'vite-plugin-vue-setup-extend'
-// eslint-disable-next-line import/default
+
 import VueI18n from '@intlify/vite-plugin-vue-i18n'
 
 const r = (src: string) => resolve(__dirname, src)
@@ -20,8 +20,10 @@ export default defineConfig({
     Pages({ extensions: ['vue', 'md'] }),
     Layouts(),
     AutoImport({
-      imports: ['vue', 'pinia', 'vue-router', 'vue-i18n', '@vueuse/core'],
+      imports: ['vue', 'pinia', 'vue-router', '@vueuse/core', 'vue-i18n'],
       dts: 'src/auto-imports.d.ts',
+      dirs: ['src/composables', 'src/store'],
+      vueTemplate: true,
     }),
     Components({
       extensions: ['vue', 'md'],
@@ -38,10 +40,7 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': r('src'),
-      '@a': r('src/assets'),
-      '@s': r('src/modules/pinia'),
-      '@u': r('src/composables'),
+      '~': r('src'),
     },
   },
   optimizeDeps: {

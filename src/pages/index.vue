@@ -1,6 +1,4 @@
 <script setup lang="ts" name="Home">
-import { useUserStore } from '@s/index'
-import { isDark, toggleDark, toggleLocales } from '@u/index'
 const { t } = useI18n()
 
 const user = useUserStore()
@@ -21,7 +19,7 @@ useTitle('Modele | Home')
       <button
         bg-inherit
         border-none
-        @click="toggleDark"
+        @click="toggleDark()"
       >
         <div
           v-if="!isDark"
@@ -42,7 +40,7 @@ useTitle('Modele | Home')
       <div
         icon-btn
         i-carbon:language
-        @click="toggleLocales"
+        @click="toggleLocales()"
       />
     </header>
     <p py-4>

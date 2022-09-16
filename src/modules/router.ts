@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import generatedRoutes from 'virtual:generated-pages'
 import { setupLayouts } from 'virtual:generated-layouts'
-import type { UserModule } from '@/types'
+import type { UserModule } from '~/types'
 
 export const router = createRouter({ routes: setupLayouts(generatedRoutes), history: createWebHistory() })
 
