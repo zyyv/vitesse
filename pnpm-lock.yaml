@@ -17,7 +17,7 @@ specifiers:
   sass: ^1.54.9
   typescript: ^4.8.3
   unocss: ^0.45.21
-  unocss-preset-useful: ^0.0.6
+  unocss-preset-useful: ^0.0.7
   unplugin-auto-import: ^0.11.2
   unplugin-vue-components: ^0.22.7
   vite: ^3.1.1
@@ -52,7 +52,7 @@ devDependencies:
   sass: 1.54.9
   typescript: 4.8.3
   unocss: 0.45.21_vite@3.1.1
-  unocss-preset-useful: 0.0.6
+  unocss-preset-useful: 0.0.7
   unplugin-auto-import: 0.11.2_au2nsc5fmpuc3qv53ukrg7parq
   unplugin-vue-components: 0.22.7_2jnluk6ucat6xsqp3eozk5r3km
   vite: 3.1.1_sass@1.54.9
@@ -4258,8 +4258,10 @@ packages:
       '@types/unist': 2.0.6
     dev: true
 
-  /unocss-preset-useful/0.0.6:
-    resolution: {integrity: sha512-RsDYF1r4xwGZpAvU1wjZOzSgaNyE9+dVuA/wwJ0pe0+c2cNaIKwiEPwLqJiDZRm35PVB9la8S/SkR6Ux5/zGoA==}
+  /unocss-preset-useful/0.0.7:
+    resolution: {integrity: sha512-Wdz8qzK6ASXkCPnRPC+Dj0unzVmO0NytgIvXSWyfm57WWE8FGTvVfRPmI07+jElx0zxx2OaQBHmJPxi+xH/mpQ==}
+    dependencies:
+      '@unocss/preset-mini': 0.45.21
     dev: true
 
   /unocss/0.45.21_vite@3.1.1:
